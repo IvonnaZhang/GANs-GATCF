@@ -1,0 +1,50 @@
+21,http://www.industry.gov.au/_vti_bin/BusinessDataCatalog.asmx?wsdl,industry.gov.au,210.193.176.79,Australia,3535908943,AS17477 Macquarie Telecom,-35.276,149.1344
+95,http://www.arikan.at/axis/services/CountryService?wsdl,arikan.at,64.15.156.118,Austria,1074764918,AS32613 iWeb Technologies Inc.,45.5,-73.5833
+189,http://bases.bvs.br/webservices/index.php?wsdl,bases.bvs.br,200.10.179.41,Brazil,3356144425,AS1251 Fundacao de Amparo a Pesquisa do Estado de Sao Pau,-23.4733,-46.6658
+28,http://www.tourism.wa.gov.au/WA_Tourism_Network/_vti_bin/UserProfileService.asmx?wsdl,tourism.wa.gov.au,203.153.245.135,Australia,3415864711,AS9822 Amnet IT Services Pty Ltd,-31.9522,115.8614
+178,http://hidroweb.ana.gov.br/fcthservices/mma.asmx?WSDL,ana.gov.br,177.69.158.132,Brazil,2974129796,null,-15.7833,-47.9167
+278,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINRefNCBI2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+226,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINFASTA2NBRF,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+240,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINRefCLUSTAL2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+257,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINFASTA2JACKKNIFERNON,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+292,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINRefFASTA2JACKKNIFER,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+279,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNANEXUS2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+291,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNARefJACKNIFERNON2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+331,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNANCBI2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+167,http://www.innovatti.com.br/_vti_bin/search.asmx?wsdl,innovatti.com.br,200.212.125.99,Brazil,3369368931,AS4230 Embratel,-10,-55
+122,http://www.g-o.be/_vti_bin/BusinessDataCatalog.asmx?wsdl,g-o.be,null,Belgium,0,null,null,null
+159,http://marinespecies.org/aphia.php?p=soap&wsdl=1,marinespecies.org,193.191.134.5,Belgium,3250554373,"AS2611 AS for BELNET, The Belgian National Research and Education Network",50.8333,4
+138,http://www.idtdna.com/AnalyzerService/AnalyzerService.asmx?WSDL,idtdna.com,67.130.12.43,United States,1132596267,"AS209 Qwest Communications Company, LLC",45.1708,-93.5758
+284,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINJACKNIFERNON2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+107,http://dconx.biz/messages.asmx?WSDL,dconx.biz,193.56.137.12,France,3241707788,AS15846 Autonomous System,48.6328,2.4405
+245,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/revseqDNAFASTA2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+184,http://www.sefaz.rs.gov.br/wsPIIFrs/wspiifrs.asmx?WSDL,rs.gov.br,null,Brazil,0,null,null,null
+152,http://www.4allsms.com/sendsms.asmx?WSDL,4allsms.com,31.24.112.60,Belgium,521695292,null,50.8333,4
+193,http://www.clearsale.com.br/aplicacao/entrada.asmx?WSDL,clearsale.com.br,98.129.108.201,United States,1652649161,AS33070 Rackspace Hosting,29.4889,-98.3987
+157,http://www.hotels-europe.com/webservices/General.asmx?WSDL,hotels-europe.com,178.18.80.177,Belgium,2987544753,AS35470 XL Network,52.5,5.75
+6,http://www.utn.edu.ar/WebServices/ListaTics.asmx?WSDL,utn.edu.ar,null,Argentina,0,null,-45.5881,-69.07
+266,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNARefACEDB2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+182,http://www.comunique-se.com.br/proveDados.asmx?WSDL,comunique-se.com.br,200.255.218.70,Brazil,3372210758,AS4230 Embratel,-10,-55
+139,http://eu.idtdna.com/Ajax/ModService.asmx?wsdl,idtdna.com,67.130.12.43,Belgium,1132596267,"AS209 Qwest Communications Company, LLC",45.1708,-93.5758
+85,http://shop.virginvieathome.com/AddToBasketService.asmx?WSDL,virginvieathome.com,194.176.199.129,Austria,3266365313,AS49572 Fujitsu Services Ltd.,51.5142,-0.0931
+197,http://www.digimess.com.br/ImportWS/ImportWS.asmx?wsdl,digimess.com.br,200.234.196.163,Brazil,3370828963,AS27715 LocaWeb Ltda,-10,-55
+273,http://biomoby.org/services/wsdl/bioinfo.icapture.ubc.ca/BIND_IdSearchGetGOTermsByPirId,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+280,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNARefFASTA2IG,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+272,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNACODATA2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+17,http://wsluisbal.com.ar/WebService.asmx?WSDL,wsluisbal.com.ar,190.247.40.16,Argentina,3203868688,AS10318 S.A.,-34.5875,-58.6725
+203,http://www.smartwebsuite.net/webservice_meeting.asmx?WSDL,smartwebsuite.net,186.202.184.108,Brazil,3133847660,null,-23.4733,-46.6658
+143,http://www.ebcs.be/iban/Cijfers.asmx?WSDL,ebcs.be,96.45.82.4,Belgium,1613582852,null,38.9311,-77.3489
+212,http://slk.icentres.net/_vti_bin/Authentication.asmx?wsdl,icentres.net,69.43.161.168,Bulgaria,1160487336,AS22489 Castle Access Inc,32.8073,-117.1324
+136,http://agiv.be/gis/localService.asmx?WSDL,agiv.be,193.190.76.50,Belgium,3250474034,"AS2611 AS for BELNET, The Belgian National Research and Education Network",51.05,3.7167
+319,http://biomoby.org/services/wsdl/bioinfo.icapture.ubc.ca/BIND_IdSearchGetGOTermsByGi,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+18,http://www.enterpriseconnect.gov.au/_vti_bin/BusinessDataCatalog.asmx?wsdl,enterpriseconnect.gov.au,210.193.179.225,Australia,3535909857,AS17477 Macquarie Telecom,-27,133
+26,http://www.microsoftsharepoint.com/agenda/_vti_bin/Authentication.asmx?wsdl,microsoftsharepoint.com,203.19.66.79,Australia,3407037007,AS9268 Over The Wire Pty Ltd,-27,133
+129,http://www.u2u.info/_vti_bin/BusinessDataCatalog.asmx?wsdl,u2u.info,null,Belgium,0,null,null,null
+233,http://biomoby.org/services/wsdl/bioinfo.icapture.ubc.ca/BIND_IdSearchGetFastaByEnsemblId,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+229,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINRefFASTA2PIR,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+223,http://biomoby.org/services/wsdl/antirrhinum.net/parseDragonDBBlastText,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+109,http://dotnet.jku.at/buch/samples/7/simple/TimeService1.asmx?WSDL,jku.at,140.78.3.160,Austria,2353922976,AS1205 Johannes Kepler University,48.3,14.3
+163,http://www.vladars.net/_vti_bin/BusinessDataCatalog.asmx?wsdl,vladars.net,80.87.254.4,Bosnia and Herzegovina,1347943940,AS16145 LANACO INECCO ISP,44.7784,17.1939
+63,http://sti.subaru.com.au/templates/global/cfc/banner_home.cfc?wsdl,subaru.com.au,50.56.52.236,Australia,842544364,null,29.4889,-98.3987
+46,http://api.godo.com.au/soap/v1_00/licenceManager.cfc?WSDL,godo.com.au,202.125.108.41,Australia,3397217321,AS55481 Wotif.com Holdings Limited,-27,133
+53,http://webct.swin.edu.au/webct/axis/Version?wsdl,swin.edu.au,136.186.1.12,Australia,2293891340,AS7575 Australian Academic and Reasearch Network (AARNet),-27,133
