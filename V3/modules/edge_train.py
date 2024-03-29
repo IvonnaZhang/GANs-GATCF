@@ -8,7 +8,7 @@ from GATCF import *
 from lib.load_dataset import get_exper
 from modules import get_model
 from modules.aggregator import cat_embedding
-from modules.get_embedding import get_user_embedding
+from modules.get_embedding import get_user_embedding, get_item_embedding
 from utils.datamodule import DataModule
 
 
@@ -29,32 +29,30 @@ class EdgeModel(torch.nn.Module, ABC):
         model = get_model(dataModule, args)
 
         # 建子图
-        subuser_embeds_list = []
+        user_embeds_list = []
+        item_embeds_list = []
+
         for x in range(1,6):
             user_graph_path = f'userlist_group_{x}.csv'
             # print(self.user_graph_path)
             # subuser_graph= self.create_user_graph(user_graph_path)
             # subuser_embeds = torch.nn.Embedding(subuser_graph.number_of_nodes(), self.dim)
             subuser_embeds_x = get_user_embedding(args, user_graph_path)
-            user_embeds_x, serv_embeds_x = model.edge_train(dataModule)
+            user_embeds_x, item_embeds_x = model.edge_train(dataModule)
 
-            # 为用户和服务创建嵌入层self.user_embeds和self.serv_embeds，其维度由args.dimension指定
-            # 对嵌入层的权重进行Kaiming正态初始化
-            # 这是一种常用的权重初始化方法，有助于防止深层网络中的梯度消失或爆炸问题
-            torch.nn.init.kaiming_normal_(subuser_embeds_x.weight)
+            torch.nn.init.kaiming_normal_(user_embeds_x.weight)
+            torch.nn.init.kaiming_normal_(item_embeds_x.weight)
 
-        new_user_embed = self.agg(subuser_embeds_list, userIdx)
-        new_item_embed =
-        GATCF
+            # 将生成的嵌入添加到列表中
+            user_embeds_list.append(user_embeds_x)
+            item_embeds_list.append(item_embeds_x)
 
-        return new_user_embed, new_item_embed
+        new_user_embed = self.agg(user_embeds_list)
+        new_item_embed = self.att(item_embeds_list)
 
-    def agg(self, user_embeds_list, userIdx):
-        # [num_slices, num_users, embed_dim] -> [num_users, embed_dim]
-        embeds = t.as_tensor(user_embeds_list)
-        agg_embeds = cat_embedding(embeds, self.datasets, userIdx, 'user', self.args)
+        agg_user_embed, agg_item_embed = GATCF
 
-        return agg_embeds
+        return agg_user_embed, agg_item_embed
 
     def edge_train(self, dataModule):
         loss = None
@@ -89,6 +87,14 @@ class UserAggregator(Module):
         # [num_slices, num_users, embed_dim] -> [num_users, embed_dim]
         embeds = t.as_tensor(user_embeds_list)
         agg_embeds = cat_embedding(embeds, self.datasets, userIdx, 'user', self.args)
+
+        return agg_embeds
+
+    def att(self, item_embeds_list, itemIdx):
+        embeds = t.as_tensor(item_embeds_list)
+        agg_embeds = self.attention(embeds)  # external attention [bs, n, dim] ->
+        agg_embeds = agg_embeds.permute(1, 0, 2).reshape(-1, self.dim * self.args.slices)
+        agg_embeds = self.fc(agg_embeds)
 
         return agg_embeds
 
