@@ -3,11 +3,11 @@ import numpy as np
 
 from datasets.packet import packet
 from lib.parsers import get_parser
-from datasets.dataset import *
+from modules.get_embedding import get_user_embedding, get_item_embedding
 
 if __name__ == '__main__':
     args = get_parser()
-    # user_embedding = get_user_embedding(args)
+    user_embedding = get_user_embedding(args, './datasets/data/原始数据/userlist_table.csv')
     # item_embedding = get_item_embedding(args)
 
     # df = np.array(load_data(args))

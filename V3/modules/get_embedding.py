@@ -13,7 +13,7 @@ from node2vec import Node2Vec
 
 
 # Node2vec get pretrain
-def get_user_embedding(args):
+def get_user_embedding(args, path, x):
     ### 图的构建
     ## 初始化图和用户查找表
     userg = d.graph([]) # 空图userg
@@ -21,12 +21,15 @@ def get_user_embedding(args):
 
     ## 读取用户数据
     # 加载文件并转换成numpy数组
-    ufile = pd.read_csv('./datasets/data/原始数据/userlist_table.csv')
+    ufile = pd.read_csv(path)
     ufile = pd.DataFrame(ufile)
     ulines = ufile.to_numpy()
 
+    row = ufile.shape[0]
+    # print(row)
+
     ## 注册用户和特征
-    for i in range(339):
+    for i in range(row):
         user_lookup.register('User', i) # 注册每个用户
 
     for ure in ulines[:, 2]:
@@ -92,14 +95,17 @@ def get_user_embedding(args):
 
     ### 用户嵌入的保存
     # 从训练好的模型中提取前339个向量，这些向量代表用户的嵌入表示
-    ans = model.wv.vectors[:339]
+    ans = model.wv.vectors[:row]
     user_embedding = np.array(ans)
 
     print("用户嵌入向量的形状:", user_embedding.shape)
     print("前几个用户嵌入向量的样本:", user_embedding[:5])
 
     # 将用户嵌入向量保存为一个pickle文件，以便后续使用
-    pk.dump(user_embedding, open(f'datasets/data/embeddings/user_embeds.pk', 'wb'))
+    if 'group' in path:
+        pk.dump(user_embedding, open(f'datasets/data/partition/subuser_embeds_{x}.pk', 'wb'))
+    else:
+        pk.dump(user_embedding, open(f'datasets/data/embeddings/user_embeds.pk', 'wb'))
 
     return user_embedding
 

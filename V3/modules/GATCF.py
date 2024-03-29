@@ -28,7 +28,8 @@ class GATCF(MetaModel):
             servg = pickle.load(open('./modules/models/baselines/servg.pk', 'rb'))
         # 如果失败（文件不存在），则调用create_graph()函数创建新的图，并将它们保存到文件中
         except:
-            user_lookup, serv_lookup, userg, servg = create_graph()
+            user_lookup, userg = create_user_graph()
+            serv_lookup, servg = create_serv_graph()
             pickle.dump(userg, open('./modules/models/baselines/userg.pk', 'wb'))
             pickle.dump(servg, open('./modules/models/baselines/servg.pk', 'wb'))
         self.usergraph, self.servgraph = userg, servg
@@ -95,7 +96,7 @@ class GATCF(MetaModel):
 
         # 模型预测的用户对服务的评分或偏好
         # 这个预测值经过sigmoid激活，因此其范围在0到1之间
-        return estimated
+        return user_embeds, serv_embeds, estimated
 
     def prepare_test_model(self):
         # 生成并处理用户和服务的嵌入向量，然后缓存
@@ -415,36 +416,20 @@ class SpGraphAttentionLayer(torch.nn.Module):
 
 
 # GraphMF
-def create_graph():
-    userg = d.graph([])
+def create_serv_graph():
     servg = d.graph([])
     # 用于注册和查询特征的ID
     # 为用户和服务创建各自的查找表实例
-    user_lookup = FeatureLookup()
     serv_lookup = FeatureLookup()
     # 读取和处理数据
-    ufile = pd.read_csv('./datasets/data/原始数据/userlist_table.csv')
-    ufile = pd.DataFrame(ufile)
-    ulines = ufile.to_numpy()
-    ulines = ulines
-
     sfile = pd.read_csv('./datasets/data/原始数据/wslist_table.csv')
     sfile = pd.DataFrame(sfile)
     # 将DataFrame对象转换为NumPy数组（ulines和slines）
     slines = sfile.to_numpy()
     slines = slines
 
-    # 通过循环注册已知数量的用户（339个）和服务（5825个）到各自的查找表中
-    for i in range(339):
-        user_lookup.register('User', i)
-    for j in range(5825):
+    for j in slines[:, 0]:
         serv_lookup.register('Serv', j)
-
-    # 进一步遍历用户和服务数据
-    for ure in ulines[:, 2]:
-        user_lookup.register('URE', ure) # 用户评价分数User Rating Score
-    for uas in ulines[:, 4]:
-        user_lookup.register('UAS', uas) # 用户活跃度分数User Activity Score
 
     for sre in slines[:, 4]:
         serv_lookup.register('SRE', sre) # 代表服务响应时间Service Response time
@@ -453,21 +438,10 @@ def create_graph():
     for sas in slines[:, 6]:
         serv_lookup.register('SAS', sas) # 代表服务活跃度分数Service Activity Score
 
-    # 根据查找表中的特征数量，为用户图和服务图添加相应数量的节点
-    userg.add_nodes(len(user_lookup))
+    # 根据查找表中的特征数量，为服务图添加相应数量的节点
     servg.add_nodes(len(serv_lookup))
 
-    # 迭代用户和服务数据，根据特征之间的关系添加边
-    for line in ulines:
-        uid = line[0]
-        ure = user_lookup.query_id(line[2])
-        if not userg.has_edges_between(uid, ure):
-            userg.add_edges(uid, ure)
-
-        uas = user_lookup.query_id(line[4])
-        if not userg.has_edges_between(uid, uas):
-            userg.add_edges(uid, uas)
-
+    # 迭代服务数据，根据特征之间的关系添加边
     for line in slines:
         sid = line[0]
         sre = serv_lookup.query_id(line[4])
@@ -484,13 +458,53 @@ def create_graph():
 
     # 为每个图添加自环
     # 图神经网络中常见的做法，允许节点在信息传递过程中考虑自身的特征
+    servg = d.add_self_loop(servg)
+    # 将图转换为无向图
+    # 确保信息可以在图中自由流动，而不受边方向的限制
+    servg = d.to_bidirected(servg)
+    return serv_lookup, servg
+
+
+def create_user_graph(user_graph_path):
+    userg = d.graph([])
+    user_lookup = FeatureLookup()
+
+    ufile = pd.read_csv(user_graph_path)
+    ufile = pd.DataFrame(ufile)
+    ulines = ufile.to_numpy()
+    ulines = ulines
+
+    # 进一步遍历用户数据
+    for i in ulines[:, 0]:
+        user_lookup.register('User', i)  # 用户ip地址
+
+    for ure in ulines[:, 2]:
+        user_lookup.register('URE', ure)  # 用户评价分数User Rating Score
+    for uas in ulines[:, 4]:
+        user_lookup.register('UAS', uas)  # 用户活跃度分数User Activity Score
+
+    userg.add_nodes(len(user_lookup))
+
+    # 迭代用户和服务数据，根据特征之间的关系添加边
+    for line in ulines:
+        uid = line[0]
+        ure = user_lookup.query_id(line[2])
+        if not userg.has_edges_between(uid, ure):
+            userg.add_edges(uid, ure)
+
+        uas = user_lookup.query_id(line[4])
+        if not userg.has_edges_between(uid, uas):
+            userg.add_edges(uid, uas)
+
+    # 为每个图添加自环
+    # 图神经网络中常见的做法，允许节点在信息传递过程中考虑自身的特征
     userg = d.add_self_loop(userg)
+
     # 将图转换为无向图
     # 确保信息可以在图中自由流动，而不受边方向的限制
     userg = d.to_bidirected(userg)
-    servg = d.add_self_loop(servg)
-    servg = d.to_bidirected(servg)
-    return user_lookup, serv_lookup, userg, servg
+
+    return user_lookup, userg
 
 
 class FeatureLookup:
@@ -549,37 +563,3 @@ def subgrapph_attention(self,args):
         subuser_embeds_list.append(subusergraph_embeddings)
     concatenated_embeddings = torch.cat(subuser_embeds_list, dim=0)  # 确保拼接的维度是0
     return concatenated_embeddings
-
-
-def create_graph_user(user_graph_path):
-    userg = d.graph([])
-    ufile = pd.read_csv(user_graph_path)
-    ufile = pd.DataFrame(ufile)
-    ulines = ufile.to_numpy()
-    ulines = ulines
-    user_lookup = FeatureLookup()
-    # 进一步遍历用户数据
-    for i in ulines[:, 0]:
-        user_lookup.register('User', i)  # 用户ip地址
-    for ure in ulines[:, 2]:
-        user_lookup.register('URE', ure)  # 用户评价分数User Rating Score
-    for uas in ulines[:, 4]:
-        user_lookup.register('UAS', uas)  # 用户活跃度分数User Activity Score
-    userg.add_nodes(len(user_lookup))
-    # 迭代用户和服务数据，根据特征之间的关系添加边
-    for line in ulines:
-        uid = line[0]
-        ure = user_lookup.query_id(line[2])
-        if not userg.has_edges_between(uid, ure):
-            userg.add_edges(uid, ure)
-
-        uas = user_lookup.query_id(line[4])
-        if not userg.has_edges_between(uid, uas):
-            userg.add_edges(uid, uas)
-        # 为每个图添加自环
-        # 图神经网络中常见的做法，允许节点在信息传递过程中考虑自身的特征
-    userg = d.add_self_loop(userg)
-    # 将图转换为无向图
-    # 确保信息可以在图中自由流动，而不受边方向的限制
-    userg = d.to_bidirected(userg)
-    return userg
