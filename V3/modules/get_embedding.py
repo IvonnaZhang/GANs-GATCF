@@ -48,12 +48,12 @@ def get_user_embedding(args, path, x):
         ure = user_lookup.query_id(line[2])
 
         # 这里使用user_lookup.query_id查询特征对应的内部ID，并检查是否已存在边，如果不存在，则添加边
-        if not userg.has_edges_between(uid, ure):
-            userg.add_edges(uid, ure)
+        if not userg.has_edges_between(i, ure):
+            userg.add_edges(i, ure)
 
         uas = user_lookup.query_id(line[4])
-        if not userg.has_edges_between(uid, uas):
-            userg.add_edges(uid, uas)
+        if not userg.has_edges_between(i, uas):
+            userg.add_edges(i, uas)
 
     ## 图转换
     # 通过d.add_self_loop(userg)为每个节点添加自环，增强模型的特征学习能力
@@ -103,7 +103,7 @@ def get_user_embedding(args, path, x):
 
     # 将用户嵌入向量保存为一个pickle文件，以便后续使用
     if 'group' in path:
-        pk.dump(user_embedding, open(f'datasets/data/partition/subuser_embeds_{x}.pk', 'wb'))
+        pk.dump(user_embedding, open(f'datasets/data/partition/sub/subuser_embeds_{x}.pk', 'wb'))
     else:
         pk.dump(user_embedding, open(f'datasets/data/embeddings/user_embeds.pk', 'wb'))
 

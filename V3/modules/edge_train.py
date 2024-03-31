@@ -40,9 +40,6 @@ class EdgeModel(torch.nn.Module, ABC):
             subuser_embeds_x = get_user_embedding(args, user_graph_path)
             user_embeds_x, item_embeds_x = model.edge_train(dataModule)
 
-            torch.nn.init.kaiming_normal_(user_embeds_x.weight)
-            torch.nn.init.kaiming_normal_(item_embeds_x.weight)
-
             # 将生成的嵌入添加到列表中
             user_embeds_list.append(user_embeds_x)
             item_embeds_list.append(item_embeds_x)
@@ -50,9 +47,7 @@ class EdgeModel(torch.nn.Module, ABC):
         new_user_embed = self.agg(user_embeds_list)
         new_item_embed = self.att(item_embeds_list)
 
-        agg_user_embed, agg_item_embed = GATCF
-
-        return agg_user_embed, agg_item_embed
+        return new_user_embed, new_item_embed
 
     def edge_train(self, dataModule):
         loss = None
@@ -140,4 +135,3 @@ def create_user_graph(user_graph_path):
     userg = d.to_bidirected(userg)
 
     return user_lookup, userg
-
