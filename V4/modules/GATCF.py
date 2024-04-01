@@ -4,8 +4,12 @@ import time
 import torch
 import pickle
 from tqdm import tqdm
+
+from lib.load_dataset import get_exper
+from lib.parsers import get_parser
 from modules.SpGAT import SpGAT
-from modules.edge_train import EdgeModel
+from modules.edge_train import *
+from utils.datamodule import DataModule
 from utils.metamodel import MetaModel
 from utils.trainer import get_optimizer
 from utils.utils import to_cuda, optimizer_zero_grad, optimizer_step, lr_scheduler_step
@@ -15,10 +19,14 @@ class GATCF(MetaModel):
     def __init__(self, user_num, serv_num, args):
         super(GATCF, self).__init__(user_num, serv_num, args)
         self.args = args
+        # Initialize
+        exper = get_exper(args)
+        dataModule = DataModule(exper, args)
         userg = pickle.load(open('./datasets/data/userg.pk', 'rb'))
         servg = pickle.load(open('./datasets/data/servg.pk', 'rb'))
         #引入边缘训练
-        self.edge_model = EdgeModel(args)
+        edge = EdgeModel(args)
+        self.edge_model = edge.edge_train_one_epoch(dataModule)
         self.usergraph, self.servgraph = userg, servg
         self.dim = args.dimension
         self.final_user_embeds, self.final_serv_embeds = self.get_final_embedding()
@@ -62,9 +70,10 @@ class GATCF(MetaModel):
         else:
             user_embeds = self.cache['user'][userIdx]
             serv_embeds = self.cache['serv'][itemIdx]
-            print()
+
             estimated = self.layers(torch.cat((user_embeds, serv_embeds), dim=-1)).sigmoid().reshape(-1)
         return  estimated
+
     def prepare_test_model(self):
         # 生成并处理用户和服务的嵌入向量，然后缓存
         Index = torch.arange(self.usergraph.number_of_nodes()).cuda()

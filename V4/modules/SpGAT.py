@@ -1,7 +1,7 @@
 import time
 
 import numpy as np
-import scipy as sp
+import scipy.sparse as sp
 import torch
 import torch.nn.functional as F
 import dgl as d
@@ -14,7 +14,7 @@ class SpGAT(torch.nn.Module):
         self.dropout = dropout # 存储dropout比率
 
         # 调用get_adj_norm_matrix静态方法获取图的邻接矩阵，并将其标准化和转移到CUDA上
-        self.adj = self.get_adj_nrom_matrix(graph).cuda()
+        self.adj = self.get_adj_nrom_matrix(graph)
         self.numbers = len(self.adj)
 
         # 初始化一个模块列表，用于存储多个头的注意力层实例
@@ -44,14 +44,12 @@ class SpGAT(torch.nn.Module):
     def get_adj_nrom_matrix(graph):
         g = graph
         # 转换为邻接矩阵
-        n = g.number_of_nodes()  # 获取图中节点的数量
-        in_deg = g.in_degrees().numpy()  # 计算图中每个节点的入度
-        rows = g.edges()[1].numpy()  # 获取图中所有边的目标节点索引
-        cols = g.edges()[0].numpy()  # 获取图中所有边的源节点索引
-        # 使用rows和cols构建CSR格式的稀疏邻接矩阵，矩阵大小为n*n，矩阵中的值全部为1
+        n = g.number_of_nodes()
+        in_deg = g.in_degrees().numpy()
+        rows = g.edges()[1].numpy()
+        cols = g.edges()[0].numpy()
         adj = sp.csr_matrix(([1] * len(rows), (rows, cols)), shape=(n, n))
 
-        # 通过normalize_adj函数对邻接矩阵进行行归一化处理，以便每行的元素之和为1
         def normalize_adj(mx):
             """Row-normalize sparse matrix"""
             rowsum = np.array(mx.sum(1))  # 求每一行的和
@@ -60,11 +58,11 @@ class SpGAT(torch.nn.Module):
             r_mat_inv_sqrt = sp.diags(r_inv_sqrt)  # D^{-0.5}
             return mx.dot(r_mat_inv_sqrt).transpose().dot(r_mat_inv_sqrt)
 
-        # 添加自连接
-        adj = adj + adj.T.multiply(adj.T > adj) - adj.multiply(adj.T > adj) # 确保邻接矩阵是对称的，即无向图的表示
-        # 归一化邻接矩阵
+        adj = adj + adj.T.multiply(adj.T > adj) - adj.multiply(adj.T > adj)
         adj = normalize_adj(adj + sp.eye(adj.shape[0]))  # adj = D^{-0.5}SD^{-0.5}, S=A+I
-        adj = torch.FloatTensor(np.array(adj.todense()))
+        print(adj.dtype)
+        print(adj)
+        adj = torch.FloatTensor( adj.toarray())
         return adj
 
 
@@ -180,7 +178,7 @@ class SpGraphAttentionLayer(torch.nn.Module):
     Sparse version GAT layer, similar to https://arxiv.org/abs/1710.10903
     """
 
-    def __init__(self, in_features, out_features, dropout, alpha, concat=True):
+    def __init__(self, in_features, out_features, dropout, alpha, concat = True):
         super(SpGraphAttentionLayer, self).__init__()
         self.in_features = in_features
         self.out_features = out_features
@@ -322,6 +320,7 @@ def create_user_graph(user_graph_path):
 
     for ure in ulines[:, 2]:
         user_lookup.register('URE', ure)  # 用户评价分数User Rating Score
+
     for uas in ulines[:, 4]:
         user_lookup.register('UAS', uas)  # 用户活跃度分数User Activity Score
 
@@ -331,12 +330,12 @@ def create_user_graph(user_graph_path):
     for line in ulines:
         uid = line[0]
         ure = user_lookup.query_id(line[2])
-        if not userg.has_edges_between(uid, ure):
-            userg.add_edges(uid, ure)
+        if not userg.has_edges_between(i, ure):
+            userg.add_edges(i, ure)
 
         uas = user_lookup.query_id(line[4])
-        if not userg.has_edges_between(uid, uas):
-            userg.add_edges(uid, uas)
+        if not userg.has_edges_between(i, uas):
+            userg.add_edges(i, uas)
 
     # 为每个图添加自环
     # 图神经网络中常见的做法，允许节点在信息传递过程中考虑自身的特征

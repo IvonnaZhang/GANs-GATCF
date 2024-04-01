@@ -6,6 +6,7 @@ import pickle as pk
 import dgl as d
 import pandas as pd
 import numpy as np
+import torch
 from node2vec import Node2Vec
 
 # node2vec_dim, node2vec_length, node2vec_walk, node2vec_epochs, node2vec_batchsize
@@ -13,7 +14,7 @@ from node2vec import Node2Vec
 
 
 # Node2vec get pretrain
-def get_user_embeds(args, path, x):
+def get_user_embedding(args, path, x):
     #图的构建
     # 初始化图和用户查找表
     userg = d.graph([]) # 空图userg
@@ -95,8 +96,8 @@ def get_user_embeds(args, path, x):
     ans = model.wv.vectors[:row]
     user_embedding = np.array(ans)
 
-    print("用户嵌入向量的形状:", user_embedding.shape)
-    print("前几个用户嵌入向量的样本:", user_embedding[:5])
+    # print("用户嵌入向量的形状:", user_embedding.shape)
+    # print("前几个用户嵌入向量的样本:", user_embedding[:5])
 
     # 将用户嵌入向量保存为一个pickle文件，以便后续使用
     if 'group' in path:
@@ -105,10 +106,12 @@ def get_user_embeds(args, path, x):
         pk.dump(user_embedding, open(f'datasets/data/embeddings/user_embeds.pk', 'wb'))
 
     return user_embedding
-def get_user_embedding(args,path):
+
+def get_subuser_embedding(args, path):
     with open(path, 'rb') as file:
         embeddings = pickle.load(file)
     sub_user_embeds = embeddings[:][1:]
+    sub_user_embeds = torch.tensor(sub_user_embeds, dtype=torch.float)
     return sub_user_embeds
 
 def get_item_embedding(args):
@@ -175,8 +178,8 @@ def get_item_embedding(args):
     ans = model.wv.vectors[:5825]
     item_embedding = np.array(ans)
 
-    print("项目嵌入向量的形状:", item_embedding.shape)
-    print("前几个项目嵌入向量的样本:", item_embedding[:5])
+    # print("项目嵌入向量的形状:", item_embedding.shape)
+    # print("前几个项目嵌入向量的样本:", item_embedding[:5])
 
     # 将项目嵌入向量保存为一个pickle文件，以便后续使用
     pk.dump(item_embedding, open(f'datasets/data/embeddings/item_embeds.pk', 'wb'))

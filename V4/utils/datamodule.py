@@ -1,10 +1,13 @@
 # coding : utf-8
 # Author : yuxiang Zeng
+
 from datasets.data_generator import get_train_valid_test_dataset
 from lib.load_dataset import get_pytorch_index
 from utils.dataloader import get_dataloaders
 import torch
 from torch.utils.data import Dataset
+
+from utils.logger import Logger
 
 
 # 数据集定义
@@ -12,6 +15,9 @@ class DataModule:
     def __init__(self, exper_type, args):
         self.args = args
         self.path = args.path
+        # Setup Logger
+        log = Logger(args)
+        args.log = log
 
         # 加载原始数据
         # Step1：用load_data加载数据data

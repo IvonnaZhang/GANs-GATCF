@@ -19,7 +19,7 @@ def get_parser():
     parser.add_argument('--valid', type=int, default=1)
     parser.add_argument('--experiment', type=int, default=0)
     parser.add_argument('--verbose', type=int, default=10)
-    parser.add_argument('--path', nargs='?', default='./datasets/data/原始数据/')
+    parser.add_argument('--path', nargs='?', default='./datasets/data/')
 
     # Training tool
     parser.add_argument('--device', type=str, default='cuda')  # gpu cpu mps cuda

@@ -14,7 +14,7 @@ class experiment1:
 
     @staticmethod
     def load_data(args):
-        string = args.path + args.dataset + 'Matrix' + '.txt'
+        string = args.path + '原始数据/' + args.dataset + 'Matrix' + '.txt'
         tensor = np.loadtxt(open(string, 'rb'))
         return tensor
 
