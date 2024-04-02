@@ -62,7 +62,7 @@ class GATCF(MetaModel):
         userIdx, itemIdx = inputs
         if train:
             # 使用 EdgeModel 获取更新的用户和项嵌入
-            user_embeds, serv_embeds = self.edge_model.get_final_embedding()
+            user_embeds, serv_embeds = self.final_user_embeds, self.final_serv_embeds
             user_embeds = self.user_attention(user_embeds)[userIdx]
             serv_embeds = self.item_attention(serv_embeds)[itemIdx]
 

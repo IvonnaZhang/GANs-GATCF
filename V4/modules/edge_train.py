@@ -1,6 +1,7 @@
 import pickle
 from abc import abstractmethod, ABC
-from datetime import time
+import datetime
+import time
 
 from tqdm import tqdm
 
@@ -52,7 +53,7 @@ class EdgeModel(torch.nn.Module, ABC):
         userIdx, itemIdx = inputs
 
         # 生成一个包含所有用户/服务节点索引的Tensor
-        Index = torch.arange(self.usergraph.number_of_nodes()).cuda()
+        Index = torch.arange(self.sub_usergraph.number_of_nodes()).cuda()
         # 将其传递给用户/服务嵌入层self.user/serv_embeds以获取所有用户/服务的嵌入向量
         user_embeds = self.pretrained_user_embeds(Index)
         Index = torch.arange(self.servgraph.number_of_nodes()).cuda() # 使用.cuda()方法将索引Tensor移动到GPU上
