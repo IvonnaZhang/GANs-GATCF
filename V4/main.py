@@ -1,15 +1,16 @@
-import torch as t
-import numpy as np
+# This is a sample Python script.
 
-from datasets.packet import packet
-from lib.parsers import get_parser
-from modules.get_embedding import get_user_embedding, get_item_embedding
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+
+def print_hi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+
+
+# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    args = get_parser()
-    user_embedding = get_user_embedding(args, './datasets/data/partition/userlist_group_5.csv', 5)
-    # item_embedding = get_item_embedding(args, './datasets/data/partition/wslist_group_1.csv', 1)
+    print_hi('PyCharm')
 
-    # df = np.array(load_data(args))
-    # dataset = ShardedTensorDataset(df, True, args)
-    # packet('./datasets/data/原始数据/userlist_table.csv', './datasets/data/原始数据/wslist_table.csv', './datasets/data/partition/RecEarser_5.pk')
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
