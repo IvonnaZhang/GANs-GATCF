@@ -254,57 +254,6 @@ class SpGraphAttentionLayer(torch.nn.Module):
     def __repr__(self):
         return self.__class__.__name__ + ' (' + str(self.in_features) + ' -> ' + str(self.out_features) + ')'
 
-#这里可以不需要因为已经预训练出来了服务图文件
-# # GraphMF
-# def create_serv_graph():
-#     servg = d.graph([])
-#     # 用于注册和查询特征的ID
-#     # 为用户和服务创建各自的查找表实例
-#     serv_lookup = FeatureLookup()
-#     # 读取和处理数据
-#     sfile = pd.read_csv('./datasets/data/原始数据/wslist_table.csv')
-#     sfile = pd.DataFrame(sfile)
-#     # 将DataFrame对象转换为NumPy数组（ulines和slines）
-#     slines = sfile.to_numpy()
-#     slines = slines
-#
-#     for j in slines[:, 0]:
-#         serv_lookup.register('Serv', j)
-#
-#     for sre in slines[:, 4]:
-#         serv_lookup.register('SRE', sre) # 代表服务响应时间Service Response time
-#     for spr in slines[:, 2]:
-#         serv_lookup.register('SPR', spr) # 代表服务价格Service Price
-#     for sas in slines[:, 6]:
-#         serv_lookup.register('SAS', sas) # 代表服务活跃度分数Service Activity Score
-#
-#     # 根据查找表中的特征数量，为服务图添加相应数量的节点
-#     servg.add_nodes(len(serv_lookup))
-#
-#     # 迭代服务数据，根据特征之间的关系添加边
-#     for line in slines:
-#         sid = line[0]
-#         sre = serv_lookup.query_id(line[4])
-#         if not servg.has_edges_between(sid, sre):
-#             servg.add_edges(sid, sre)
-#
-#         sas = serv_lookup.query_id(line[6])
-#         if not servg.has_edges_between(sid, sas):
-#             servg.add_edges(sid, sas)
-#
-#         spr = serv_lookup.query_id(line[2])
-#         if not servg.has_edges_between(sid, spr):
-#             servg.add_edges(sid, spr)
-#
-#     # 为每个图添加自环
-#     # 图神经网络中常见的做法，允许节点在信息传递过程中考虑自身的特征
-#     servg = d.add_self_loop(servg)
-#     # 将图转换为无向图
-#     # 确保信息可以在图中自由流动，而不受边方向的限制
-#     servg = d.to_bidirected(servg)
-#     return serv_lookup, servg
-
-
 def create_user_graph(user_graph_path):
     userg = d.graph([])
     user_lookup = FeatureLookup()

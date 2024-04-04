@@ -33,7 +33,7 @@ class EdgeModel(torch.nn.Module, ABC):
             pretrained_user_matrix = get_subuser_embedding(args, user_embedding_path)
             num_embeddings, embedding_dim = pretrained_user_matrix.shape
             self.pretrained_user_embeds = torch.nn.Embedding(num_embeddings, embedding_dim)
-            self.pretrained_user_embeds.weight = torch.nn.Parameter(pretrained_user_matrix )
+            self.pretrained_user_embeds.weight = torch.nn.Parameter(pretrained_user_matrix)
             # 如果你不希望在训练中更新这些嵌入，可以将它们设置为不需要梯度
             self.pretrained_user_embeds.weight.requires_grad = True # 如果需要微调
 
@@ -63,9 +63,6 @@ class EdgeModel(torch.nn.Module, ABC):
         item_embeds = self.item_attention(item_embeds)[itemIdx]
 
         estimated = self.layers(torch.cat((user_embeds, item_embeds), dim=-1)).sigmoid().reshape(-1)
-
-        # agg_user_embeds, agg_item_embeds = self.agg_user_embeds, self.agg_item_embeds
-
         return estimated, user_embeds, item_embeds
 
     def get_embeds_parameters(self):
@@ -122,8 +119,8 @@ class EdgeModel(torch.nn.Module, ABC):
         torch.set_grad_enabled(False)
         lr_scheduler_step(self.scheduler_tf)
 
-        pk.dump(edge_user_embeds, open(f'datasets/data/partition/final/label_user_embeds_{self.sub_round}.pk', 'wb'))
-        pk.dump(edge_serv_embeds, open(f'datasets/data/partition/final/label_serv_embeds_{self.sub_round}.pk', 'wb'))
+        pk.dump(edge_user_embeds, open(f'datasets/data/partition/sub/subuser_embeds_{self.sub_round}.pk', 'wb'))
+        pk.dump(edge_serv_embeds, open(f'datasets/data/partition/sub/subserv_embeds_{self.sub_round}.pk', 'wb'))
 
         return loss, t2 - t1
 
