@@ -17,13 +17,13 @@ with open('./datasets/data/partition/RecEarser_5.pk', 'rb') as f:
     data_pickle = pk.load(f)
     f = np.array(data_pickle)
 
-    print(f.shape)
-    # print(f.dtype)
-    print("第一组:", f[0])
-    print("第二组:", f[1])
-    print("第三组:", f[2])
-    print("第四组:", f[3])
-    print("第五组:", f[4])
+    # print(f.shape)
+    # # print(f.dtype)
+    # print("第一组:", f[0])
+    # print("第二组:", f[1])
+    # print("第三组:", f[2])
+    # print("第四组:", f[3])
+    # print("第五组:", f[4])
 
 keys_list = []
 for i in range(5):

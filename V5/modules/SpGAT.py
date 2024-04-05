@@ -60,8 +60,8 @@ class SpGAT(torch.nn.Module):
 
         adj = adj + adj.T.multiply(adj.T > adj) - adj.multiply(adj.T > adj)
         adj = normalize_adj(adj + sp.eye(adj.shape[0]))  # adj = D^{-0.5}SD^{-0.5}, S=A+I
-        print(adj.dtype)
-        print(adj)
+        # print(adj.dtype)
+        # print(adj)
         adj = torch.FloatTensor( adj.toarray())
         return adj
 
@@ -144,7 +144,10 @@ class SpecialSpmmFunction(torch.autograd.Function):
     @staticmethod
     def forward(ctx, indices, values, shape, b):
         assert indices.requires_grad == False
-        a = torch.sparse_coo_tensor(indices, values, shape)
+        device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+        indices = indices.to(device)
+        values = values.to(device)
+        a = torch.sparse_coo_tensor(indices, values, shape).to(device)
         ctx.save_for_backward(a, b)
         ctx.N = shape[0]
         return torch.matmul(a, b)
