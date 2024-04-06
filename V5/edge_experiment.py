@@ -5,7 +5,7 @@ import os
 import time
 import collections
 import numpy as np
-
+from lib.add_label import Add_label
 from lib.parsers import get_parser
 from modules import get_model
 from lib.load_dataset import get_exper
@@ -15,7 +15,7 @@ from utils.monitor import EarlyStopping
 from utils.utils import set_seed, set_settings
 
 
-os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
+os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 
 global log
 
@@ -44,10 +44,7 @@ def RunOnce(args, runId, Runtime, log):
         train_time.append(time_cost)
 
         if args.verbose and epoch % args.verbose == 0:
-            log.only_print(
-
-                f"Round={runId + 1} Epoch={epoch + 1:02d} Loss={epoch_loss:.4f} vMAE={valid_error['MAE']:.4f} vRMSE={valid_error['RMSE']:.4f} vNMAE={valid_error['NMAE']:.4f} vNRMSE={valid_error['NRMSE']:.4f} time={sum(train_time):.1f} s")
-
+            log.only_print(f"Round={runId + 1} Epoch={epoch + 1:02d} Loss={epoch_loss:.4f} vMAE={valid_error['MAE']:.4f} vRMSE={valid_error['RMSE']:.4f} vNMAE={valid_error['NMAE']:.4f} vNRMSE={valid_error['NRMSE']:.4f} time={sum(train_time):.1f} s")
         if monitor.early_stop:
             break
 
@@ -59,6 +56,7 @@ def RunOnce(args, runId, Runtime, log):
 
     log(f'Round={runId + 1} BestEpoch={monitor.best_epoch:d} MAE={results["MAE"]:.4f} RMSE={results["RMSE"]:.4f} NMAE={results["NMAE"]:.4f} NRMSE={results["NRMSE"]:.4f} Training_time={sum_time:.1f} s\n')
 
+
     return {
         'MAE': results["MAE"],
         'RMSE': results["RMSE"],
@@ -69,6 +67,7 @@ def RunOnce(args, runId, Runtime, log):
 
 
 def RunExperiments(log, args):
+
     log('*' * 20 + 'Experiment Start' + '*' * 20)
     metrics = collections.defaultdict(list)
 
@@ -77,7 +76,9 @@ def RunExperiments(log, args):
         results = RunOnce(args, runId, runHash, log)
         for key in results:
             metrics[key].append(results[key])
-
+    log('*' * 20 + '添加标签' + '*' * 20)
+    Add_label.add_label()
+    log('*' * 20 + '标签添加完成' + '*' * 20)
     log('*' * 20 + 'Experiment Results:' + '*' * 20)
 
     for key in metrics:

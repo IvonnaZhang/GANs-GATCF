@@ -6,7 +6,7 @@ def get_parser():
 
     # 实验常用
     parser.add_argument('--interaction', type=str, default='NeuCF')
-    parser.add_argument('--model', type=str, default='GATCF')  # NeuCF, CSMF, GraphMF, GATCF
+    parser.add_argument('--model', type=str, default='EdgeModel')  # NeuCF, CSMF, GraphMF, GATCF,EdgeModel
     parser.add_argument('--seed', type=int, default=0)
     parser.add_argument('--dataset', type=str, default='rt')  # rt tp
 

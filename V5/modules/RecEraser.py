@@ -140,7 +140,7 @@ def interaction_based_balanced_parition(tensor, args):
         pk.dump(C, open(f'./datasets/data/partition/RecEarser_{args.slices}.pk', 'wb'))
 
     # 打印每个分区的用户-项目对数量
-    print("每个分区的用户-项目对数量:")
+    # print("每个分区的用户-项目对数量:")
     dic = {}
     for slice_id, users_items in C.items():
         dic[slice_id] = sum(len(items) for items in users_items.values())
