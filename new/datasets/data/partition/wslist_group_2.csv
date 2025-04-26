@@ -1,0 +1,81 @@
+252,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINRefSWISS2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+16,http://wsatebara.com.ar/ServicioWeb.asmx?WSDL,wsatebara.com.ar,190.247.40.16,Argentina,3203868688,AS10318 S.A.,-34.5875,-58.6725
+315,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINFASTA2TREECON,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+198,http://diretorios.bvs.br/webservices/index.php?wsdl,diretorios.bvs.br,200.10.179.43,Brazil,3356144427,AS1251 Fundacao de Amparo a Pesquisa do Estado de Sao Pau,-23.4733,-46.6658
+248,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINRefTEXT2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+296,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNAFASTA2RAW,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+70,http://blackboxlbs.com/BlackBoxWebservice/BlackBoxMiddleTier.asmx?WSDL,blackboxlbs.com,null,Australia,0,null,null,null
+1,http://ewave.no-ip.com/ECallws/StadiumSinchronization.asmx?WSDL,no-ip.com,8.23.224.110,United States,135782510,AS3356 Level 3 Communications,38,-97
+13,http://www.neodynamic.com/Products/Demos/BCWebSampleWS/BarcodeProfessionalWS.asmx?wsdl,neodynamic.com,190.2.60.187,Argentina,3187817659,AS16814 S.A.,-32.9468,-60.6393
+146,http://www.ibanbic.be/Olo.asmx?WSDL,ibanbic.be,96.45.82.196,Belgium,1613583044,null,38.9311,-77.3489
+274,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINRefGEN2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+208,http://www.bvs.br/apps/basesws/index.php?wsdl,www.bvs.br,200.10.179.43,Brazil,3356144427,AS1251 Fundacao de Amparo a Pesquisa do Estado de Sao Pau,-23.4733,-46.6658
+103,http://olymp.ifs.tuwien.ac.at:8088/SOMTrainer?wsdl,tuwien.ac.at,128.130.35.76,Austria,2156012364,AS679 Vienna University of Technology,48.2,16.3667
+261,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNAFASTA2NCBI,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+34,http://www.stpatricks.qld.edu.au/_vti_bin/Authentication.asmx?wsdl,stpatricks.qld.edu.au,110.232.140.115,Australia,1860734067,null,-33.8615,151.2055
+204,http://www.virtualhealthlibrary.org/apps/basesws/index.php?wsdl,virtualhealthlibrary.org,null,Brazil,0,null,null,null
+106,http://dconx.biz/messagestest.asmx?WSDL,dconx.biz,193.56.137.12,France,3241707788,AS15846 Autonomous System,48.6328,2.4405
+153,http://budgetassistant.axionweb.be/service.asmx?WSDL,axionweb.be,212.63.233.29,Belgium,3560958237,"AS25367 For multihomed access of Banque Internationale a Luxembourg, in Luxemburg",50.8333,4
+295,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINRefFASTA2GCG8,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+115,http://www.noe.bauakademie.at/importexport/export.asmx?WSDL,bauakademie.at,null,Austria,0,null,null,null
+238,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNARefFASTA2JACKKNIFERNON,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+298,http://biomoby.org/services/wsdl/antirrhinum.net/getDragonBlastText,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+305,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINTREECON2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+141,http://www.ebcs.be/iban/IBANBIC.asmx?WSDL,ebcs.be,96.45.82.132,Belgium,1613582980,null,38.9311,-77.3489
+160,http://fe.bcc.proximity.be/WS/BCC_LINK_2008.asmx?WSDL,proximity.be,217.111.147.8,Belgium,3647968008,AS8220 COLT Technology Services,50.8333,4
+2,http://ewave.no-ip.com/EcallWS/CinemaSinchronization.asmx?WSDL,no-ip.com,8.23.224.110,United States,135782510,AS3356 Level 3 Communications,38,-97
+205,http://intranet.wappa.com.br/WebServices/Taxi.asmx?WSDL,wappa.com.br,200.225.88.90,Brazil,3370211418,AS19089 Dedalus.com S/C Ltda,-10,-55
+196,http://ws.cronostelemetria.com.br/WebServices/Service.asmx?wsdl,cronostelemetria.com.br,97.74.214.1,Brazil,1632294401,"AS26496 GoDaddy.com, Inc.",33.6119,-111.8906
+127,http://www.sra.nl/_vti_bin/People.asmx?wsdl,sra.nl,213.154.250.200,Belgium,3583703752,AS12859 BIT BV,52.5,5.75
+304,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINGCG2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+334,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINRefCODATA2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+336,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNAFASTA2STADEN,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+214,http://www.law.uni-sofia.bg/_vti_bin/Authentication.asmx?wsdl,uni-sofia.bg,62.44.96.22,Bulgaria,1043095574,AS5421 Sofia University autonomous system,42.6833,23.3167
+317,http://biomoby.org/services/wsdl/bioinfo.icapture.ubc.ca/BIND_IdSearchGetFastaByUniGeneId,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+3,http://ewave.no-ip.com/ECallws/StadiumData.asmx?WSDL,no-ip.com,8.23.224.110,United States,135782510,AS3356 Level 3 Communications,38,-97
+255,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINFASTA2GCG8,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+97,http://www.arikan.at/axis/services/DistrictService?wsdl,arikan.at,64.15.156.118,Austria,1074764918,AS32613 iWeb Technologies Inc.,45.5,-73.5833
+234,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNARefFASTA2RAW,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+286,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINFASTA2MSF,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+313,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINFASTA2PIR,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+169,http://www.innovatti.com.br/_vti_bin/UserProfileService.asmx?wsdl,innovatti.com.br,200.212.125.99,Brazil,3369368931,AS4230 Embratel,-10,-55
+220,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINSTADEN2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+142,http://www.ebcs.be/iban/Olo.asmx?WSDL,ebcs.be,96.45.82.68,Belgium,1613582916,null,38.9311,-77.3489
+258,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNAFASTA2MEGA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+213,http://www.law.uni-sofia.bg/_vti_bin/People.asmx?wsdl,uni-sofia.bg,62.44.96.22,Bulgaria,1043095574,AS5421 Sofia University autonomous system,42.6833,23.3167
+237,http://biomoby.org/services/wsdl/atidb.org/getTargetPResultByTranscriptCode,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+289,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINRefFASTA2MSF,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+9,http://xml.dev.hoteldo.com/HotelDoInterface.asmx?WSDL,hoteldo.com,200.59.145.167,Argentina,3359347111,AS11664 Techtel LMDS Comunicaciones Interactivas S.A.,-34.4714,-58.5078
+318,http://biomoby.org/services/wsdl/bioinfo.icapture.ubc.ca/BIND_IdSearchGetGOTermsByEmblId,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+227,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNARefFASTA2NCBI,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+14,http://www.ssat.com.ar/googleearth1.1/service.asmx?wsdl,ssat.com.ar,200.127.117.188,Argentina,3363796412,AS10481 Prima S.A.,-34.7765,-58.4069
+332,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNAGEN2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+11,http://ba.mobilenik.com.ar/dbbrowser/dbbrowser.asmx?WSDL,mobilenik.com.ar,null,Argentina,0,null,null,null
+8,http://200.45.113.149/SC.BlackBerryClients.WS/Service.asmx?WSDL,200.45.113.149,200.45.113.149,Argentina,3358421397,AS7303 Telecom Argentina S.A.,-34.5875,-58.6725
+308,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNAFASTA2CLUSTAL,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+10,http://www.librosar.com.ar/portal/servicioonix.asmx?WSDL,librosar.com.ar,null,Argentina,0,null,null,null
+12,http://www.mslatam.com/latam/msdn/comunidad/dce/estadistica/webservices/FSD_Statistics_WS.asmx?WSDL,mslatam.com,65.55.39.10,Argentina,1094133514,AS8075 Microsoft Corp,47.6801,-122.1206
+118,http://www.nanonull.com/TimeService/TimeService.asmx?wsdl,nanonull.com,62.218.28.242,Austria,1054481650,AS8437 UTA.AT Backbone,47.8,16.25
+191,http://www.bireme.org/apps/basesws/index.php?wsdl,bireme.org,200.10.179.43,Brazil,3356144427,AS1251 Fundacao de Amparo a Pesquisa do Estado de Sao Pau,-23.4733,-46.6658
+61,http://xml.redcoal.com/soapserver.dll/wsdl/ISoapServer,redcoal.com,59.154.43.98,Australia,999959394,AS7474 SingTel Optus Pty Ltd,-27,133
+93,http://www.arikan.at/axis/services/urn:xmltoday-delayed-quotes?wsdl,arikan.at,64.15.156.118,Austria,1074764918,AS32613 iWeb Technologies Inc.,45.5,-73.5833
+299,http://biomoby.org/services/wsdl/atidb.org/getInsertionsWithOffsetAsGFFByAGICode,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+323,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNAJACKNIFERNON2FASTA,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+102,http://office.faircheck.at/paraTesting/WebService/SVSR_Akt_Lookup.asmx?WSDL,faircheck.at,91.227.204.35,Austria,1541655587,null,47.3333,13.3333
+20,http://www.enterpriseconnect.gov.au/_vti_bin/Authentication.asmx?wsdl,enterpriseconnect.gov.au,210.193.179.225,Australia,3535909857,AS17477 Macquarie Telecom,-27,133
+64,http://sti.subaru.com.au/templates/global/cfc/banner_showrm.cfc?wsdl,subaru.com.au,50.56.52.236,Australia,842544364,null,29.4889,-98.3987
+92,http://www.pri.univie.ac.at/~mangler/CEWebS/Homework/,univie.ac.at,131.130.70.17,Austria,2206352913,"AS760 University of Vienna, Austria",48.2,16.3667
+125,http://www.sra.nl/_vti_bin/SharepointEmailWS.asmx?wsdl,sra.nl,213.154.250.200,Belgium,3583703752,AS12859 BIT BV,52.5,5.75
+45,http://api.godo.com.au/soap/v1_00/product.cfc?WSDL,godo.com.au,202.125.108.41,Australia,3397217321,AS55481 Wotif.com Holdings Limited,-27,133
+222,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretPROTEINFASTA2CLUSTAL,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+31,http://www.westernaustralia.com/de/_vti_bin/UserProfileService.asmx?wsdl,westernaustralia.com,203.153.245.134,Germany,3415864710,AS9822 Amnet IT Services Pty Ltd,-31.9522,115.8614
+113,http://travel.jet.at/JtrWebService/JtrWebService.asmx?WSDL,jet.at,94.247.144.176,Austria,1593282736,AS42572 abaton EDV - Dienstleistungs GmbH,47.3333,13.3333
+41,http://www.crickscore.com/services/TeamAccess?wsdl,crickscore.com,208.73.211.152,Australia,3494499224,AS33626 Oversee.net,34.0533,-118.2549
+51,http://www.mp3.com.au/WebServices/LocationService.asmx?WSDL,mp3.com.au,50.23.104.22,Australia,840394774,null,37.3394,-121.895
+262,http://biomoby.org/services/wsdl/soaplab.icapture.ubc.ca/seqretDNARefFASTA2NBRF,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+135,http://ariadne.cs.kuleuven.ac.be/SQI/wsdl/SessionManagement.wsdl,kuleuven.ac.be,134.58.64.15,Belgium,2251964431,"AS2611 AS for BELNET, The Belgian National Research and Education Network",50.8833,4.7
+172,http://seguro.brti.com.br/brtsi/services/CustomerSearchWS?wsdl,brti.com.br,null,Brazil,0,null,null,null
+241,http://biomoby.org/services/wsdl/bioinfo.icapture.ubc.ca/BIND_IdSearchGetFastaBySmartId,biordf.net,96.49.108.226,Canada,1613851874,AS6327 Shaw Communications Inc.,49.25,-123.1333
+173,http://desenv.tce.sc.gov.br:8080/axis/WSeO.jws?wsdl,sc.gov.br,200.19.215.26,Brazil,3356743450,AS11802 CIASC,-10,-55
+40,http://www.crickscore.com/services/Version?wsdl,crickscore.com,208.73.211.152,Australia,3494499224,AS33626 Oversee.net,34.0533,-118.2549
+36,http://www.iress.com.au/AutoComplete.asmx?WSDL,iress.com.au,203.32.184.246,Australia,3407919350,AS17755 BRIDGEDFS LIMITED,-27,133

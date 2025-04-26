@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cf32379a-755b-44db-b2f8-dfd0734e99d3" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/../V4/datasets/data/原始数据/数据查看.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../V4/datasets/data/原始数据/数据查看.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../V4/实验步骤.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../V4/实验步骤.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../V5/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../V5/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../V5/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../V5/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../V5/.idea/本地.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../V5/.idea/本地.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../V5/datasets/data/原始数据/数据查看.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../V5/datasets/data/原始数据/数据查看.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../V5/results/log/None.log" beforeDir="false" afterPath="$PROJECT_DIR$/../V5/results/log/None.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../V5/实验步骤.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../V5/实验步骤.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/本地.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/__MACOSX/._partition" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/__MACOSX/partition/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/__MACOSX/partition/._RecEarser_5.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/__MACOSX/partition/._userlist_group_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/__MACOSX/partition/._userlist_group_2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/__MACOSX/partition/._userlist_group_3.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/__MACOSX/partition/._userlist_group_4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/__MACOSX/partition/._userlist_group_5.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/__MACOSX/partition/._wslist_group_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/__MACOSX/partition/._wslist_group_2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/__MACOSX/partition/._wslist_group_3.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/__MACOSX/partition/._wslist_group_4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/__MACOSX/partition/._wslist_group_5.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/embeddings/item_embeds.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/embeddings/user_embeds.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/RecEarser_5.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/sub/subuser_embeds_1.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/sub/subuser_embeds_2.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/sub/subuser_embeds_3.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/sub/subuser_embeds_4.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/sub/subuser_embeds_5.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/sub/updated_embeddings_1.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/sub/updated_embeddings_2.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/sub/updated_embeddings_3.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/sub/updated_embeddings_4.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/sub/updated_embeddings_5.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/userlist_group_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/userlist_group_2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/userlist_group_3.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/userlist_group_4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/userlist_group_5.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/wslist_group_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/wslist_group_2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/wslist_group_3.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/wslist_group_4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/partition/wslist_group_5.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/rt.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/servg.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/tp.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/userg.pk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/原始数据/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/原始数据/rtMatrix.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/原始数据/tpMatrix.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/原始数据/userlist.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/原始数据/userlist.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/原始数据/userlist_idx.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/原始数据/userlist_table.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/原始数据/wslist.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/原始数据/wslist.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/原始数据/wslist_idx.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/原始数据/wslist_table.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data/原始数据/数据查看.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/data_generator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/gans_data/test_matrix.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/gans_data/train_matrix.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/gans_data/train_matrix_生成.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/gans_data/valid_matrix.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/packet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_experiment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/add_label.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/early_stop.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/load_dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/metrics.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/parsers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/self_attention.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/GATCF.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/RecEraser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/SpGAT.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/aggregator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/edge_train.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/get_embedding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/log/None.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/try.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/dataloader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/datamodule.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/metamodel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/metrics.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/monitor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/trainer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/实验步骤.ipynb" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2gu3wBCoKwMSHywBGcuiISnqCcC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Experiment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="本地" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Experiment.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Experiment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="cf32379a-755b-44db-b2f8-dfd0734e99d3" name="变更" comment="" />
+      <created>1716533872503</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716533872503</updated>
+      <workItem from="1716533874273" duration="8187000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/V6$edge_experiment.coverage" NAME="edge_experiment 覆盖结果" MODIFIED="1716541525448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/V6$Experiment.coverage" NAME="Experiment 覆盖结果" MODIFIED="1716540022926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/V6$metamodel.coverage" NAME="metamodel 覆盖结果" MODIFIED="1716541512965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/V6$metrics.coverage" NAME="metrics 覆盖结果" MODIFIED="1716541362219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+  </component>
+</project>
